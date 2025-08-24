@@ -48,7 +48,7 @@ export class UsersService {
         return this.users.find(user => user.id === id);
     }
 
-    create(user: {name: string, email: string, role: 'ADMIN' | 'INTERN' | "ENGINEER" }) {
+    create(user: CreateUserDto) {
         const usersByHighestId = [...this.users].sort((a, b) => b.id - a.id);
         const newUser = {
             id: usersByHighestId[0].id + 1,
