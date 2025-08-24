@@ -24,7 +24,7 @@ export class UsersController {
     }
 
     @Post() //Create user 
-    create(@Body() user: {name: string, email: string, role: 'ADMIN' | 'INTERN' | "ENGINEER" }) {
+    create(@Body() user: CreateUserDto)  {
         return this.usersService.create(user);
     }
 
