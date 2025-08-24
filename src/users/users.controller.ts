@@ -29,7 +29,7 @@ export class UsersController {
     }
 
     @Patch(':id') //Update user profile
-    update(@Param('id', ParseIntPipe) id: number, @Body() userUpdate: {name: string, email: string, role: 'ADMIN' | 'INTERN' | "ENGINEER" }) {
+    update(@Param('id', ParseIntPipe) id: number, @Body() userUpdate: UpdateUserDto) {
         return this.usersService.update(id, userUpdate);
     }
 
