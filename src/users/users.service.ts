@@ -58,7 +58,7 @@ export class UsersService {
         return newUser;
     }
 
-    update(id:number, updatedUser: {name: string, email: string, role: 'ADMIN' | 'INTERN' | "ENGINEER" }) {
+    update(id:number, updatedUser: UpdateUserDto) {
         this.users = this.users.map(user => user.id === id ? {...user, ...updatedUser} : user);
         return this.findOne(id);
     }
