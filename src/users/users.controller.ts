@@ -22,7 +22,7 @@ export class UsersController {
     }
 
     @Post() //Create user
-    create(@Body() user: {}) {
+    create(@Body() user: {name: string, email: string, role: 'ADMIN' | 'INTERN' | "ENGINEER" }) {
         return this.usersService.create(user);
     }
 
