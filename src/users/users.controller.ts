@@ -8,7 +8,7 @@ export class UsersController {
     constructor(private readonly usersService: UsersService) {}
     @Get() //Get users list and query params
     findAll(@Query('role') role?: 'ADMIN' | 'INTERN' | "ENGINEER" ) {
-        return [];
+        return this.usersService.findAll(role);
     }
 
     @Get('interns') //Get interns
