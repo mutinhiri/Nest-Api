@@ -4,6 +4,8 @@ import { UsersService } from './users.service';
 
 @Controller('users')
 export class UsersController {
+
+    constructor(private readonly usersService: UsersService) {}
     @Get() //Get users list and query params
     findAll(@Query('role') role?: 'ADMIN' | 'INTERN' | "ENGINEER" ) {
         return [];
