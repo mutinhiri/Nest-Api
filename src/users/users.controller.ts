@@ -23,7 +23,7 @@ export class UsersController {
 
     @Post() //Create user
     create(@Body() user: {}) {
-        return {};
+        return this.usersService.create(user);
     }
 
     @Patch(':id') //Update user
