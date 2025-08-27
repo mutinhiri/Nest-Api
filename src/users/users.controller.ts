@@ -18,7 +18,7 @@ export class UsersController {
 
     @Get(':id') //Get user by id
     findOne(@Param('id') id: string) {
-        return {id};
+        return this.usersService.findOne(+id);
     }
 
     @Post() //Create user
