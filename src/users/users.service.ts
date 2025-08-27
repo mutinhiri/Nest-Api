@@ -46,4 +46,9 @@ export class UsersService {
         return this.users.find(user => user.id === id);
     }
 
+    create(user: {name: string, email: string, role: 'ADMIN' | 'INTERN' | "ENGINEER" }) {
+        this.users.push(user);
+        return user;
+    }
+
 }
