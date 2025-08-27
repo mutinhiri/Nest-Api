@@ -21,7 +21,7 @@ export class UsersController {
         return this.usersService.findOne(id);
     }
 
-    @Post() //Create user profile
+    @Post() //Create user 
     create(@Body() user: {name: string, email: string, role: 'ADMIN' | 'INTERN' | "ENGINEER" }) {
         return this.usersService.create(user);
     }
