@@ -47,6 +47,7 @@ export class UsersService {
     }
 
     create(user: {name: string, email: string, role: 'ADMIN' | 'INTERN' | "ENGINEER" }) {
+        const usersByHighestId = [...this.users].sort((a, b) => b.id - a.id);
         this.users.push(user);
         return user;
     }
