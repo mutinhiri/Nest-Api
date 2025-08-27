@@ -13,7 +13,7 @@ export class UsersController {
 
     @Get('interns') //Get interns
     findInterns() {
-        return [];
+        return this.usersService.findAll('INTERN');
     }
 
     @Get(':id') //Get user by id
