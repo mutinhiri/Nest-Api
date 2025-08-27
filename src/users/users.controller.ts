@@ -28,7 +28,7 @@ export class UsersController {
 
     @Patch(':id') //Update user
     update(@Param('id') id: string, @Body() userUpdate: {}) {
-        return {id, ...
+        return this.usersService.update(+id, userUpdate);
     }
 
     @Delete(':id') //Delete user
