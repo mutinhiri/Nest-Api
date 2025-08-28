@@ -25,7 +25,7 @@ export class UsersController {
 
     @Patch(':id') //Update user
     update(@Param('id') id: string, @Body() userUpdate: {}) {
-        return {};
+        return {id, ...userUpdate};
     }
 
 }
