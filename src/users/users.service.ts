@@ -36,6 +36,9 @@ export class UsersService {
     ]
 
     findAll(role?: 'ADMIN' | 'INTERN' | "ENGINEER" ) {
+        if (role) {
+            return this.users.filter(user => user.role === role);
+        }
         return this.users;
     }
 
