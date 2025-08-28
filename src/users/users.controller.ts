@@ -12,4 +12,9 @@ export class UsersController {\
         return {};
     }
 
+    @Get('interns') //Get interns
+    findInterns() {
+        return [];
+    }
+
 }
