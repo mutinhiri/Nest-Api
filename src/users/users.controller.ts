@@ -4,7 +4,12 @@ import { Controller, Get } from '@nestjs/common';
 export class UsersController {\
     @Get() //Get users
     findAll() {
-        return 'This action returns all users';
+        return [];
+    }
+
+    @Get(':id') //Get user by id
+    findOne(@Param('id') id: string) {
+        return {};
     }
 
 }
