@@ -35,7 +35,7 @@ export class UsersService {
         }
     ]
 
-    findAll() {
+    findAll(role?: 'ADMIN' | 'INTERN' | "ENGINEER" ) {
         return this.users;
     }
 
