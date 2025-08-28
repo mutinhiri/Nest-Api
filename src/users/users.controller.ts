@@ -8,14 +8,16 @@ export class UsersController {
         return [];
     }
 
-    @Get(':id') //Get user by id
-    findOne(@Param('id') id: string) {
-        return {};
-    }
-
     @Get('interns') //Get interns
     findInterns() {
         return [];
     }
+
+    @Get(':id') //Get user by id
+    findOne(@Param('id') id: string) {
+        return {id};
+    }
+
+
 
 }
