@@ -2,7 +2,7 @@ import { Controller, Get } from '@nestjs/common';
 import { Param } from '@nestjs/common';
 
 @Controller('users')
-export class UsersController {\
+export class UsersController {
     @Get() //Get users
     findAll() {
         return [];
