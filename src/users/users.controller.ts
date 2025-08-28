@@ -4,7 +4,7 @@ import { Param } from '@nestjs/common';
 @Controller('users')
 export class UsersController {
     @Get() //Get users list and query params
-    findAll(@Query('role') role?: 'ADMIN' | 'INTERN') {
+    findAll(@Query('role') role?: 'ADMIN' | 'INTERN' | "ENGINEER" ) {
         return [];
     }
 
