@@ -35,4 +35,8 @@ export class UsersService {
         }
     ]
 
+    findAll() {
+        return this.users;
+    }
+
 }
